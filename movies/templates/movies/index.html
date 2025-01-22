@@ -1,0 +1,20 @@
+{% extends 'movies/_base.html' %}
+
+<html>
+  <body>
+    {% block content%}
+    <h1>Looking for a good movie?</h1>
+    {% if movies %}
+    <ul>
+      {% for movie in movies %}
+      <li>{{movie}}</li>
+      {% endfor%}
+    </ul>
+    {% else %}
+    <p>
+      No favorite movies... check back later when the site creator is done
+      finding a good enough movie to post here.
+    </p>
+    {% endif %} {% endblock%}
+  </body>
+</html>
